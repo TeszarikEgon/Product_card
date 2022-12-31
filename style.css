@@ -1,0 +1,175 @@
+/*
+
+----------Table of content----------
+
+    0. CSS Reset
+    1. Universal Styles
+    2.Product Card
+    3. Responsive Styles
+
+
+
+*/
+
+/* 1. Basic settings*/
+
+:root{
+
+  /*Primary colors*/
+
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /*Neutral colors*/
+
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%); 
+
+
+}
+/*----------------------------------------------
+------------------------------------------------
+0. CSS Reset
+------------------------------------------------
+----------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*----------------------------------------------
+  ------------------------------------------------
+  1. Universal Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+body {
+  height: 100vh;
+  font-family: Montserrat;
+  font-size: 14px;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+main{
+  height: 450px;
+  width: 600px;
+  background-color: var(--White);
+  border-radius: 10px;
+  display: flex;
+}
+
+  /*----------------------------------------------
+  ------------------------------------------------
+    2. Product Card
+  ------------------------------------------------
+  ----------------------------------------------*/
+
+section{
+  width: 100%;
+  
+}
+.info .container{
+    padding: 32px;
+}
+.info h2{
+    
+    color: var(--DarkGrayishBlue);
+    font-weight: 500;
+    letter-spacing: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.info h1{
+    margin-top: 22px;
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--VeryDarkBlue);
+    line-height: 32px;
+}
+.info p{
+    margin-top: 24px;
+    color: var(--DarkGrayishBlue);
+    line-height: 23px;
+}
+.info ul{
+    margin-top: 24px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+.info .discount{
+    margin-right: 20px;
+    color: var(--darkCyan);
+    font-family: fraunces;
+    font-size: 32px;
+}
+.info .no_discount{
+    font-size:13px;
+    color: var(--DarkGrayishBlue);
+    text-decoration: line-through;
+}
+.info a{
+    display: block;
+    margin-top: 26px;
+    padding: 14px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: var(--darkCyan);
+    color: var(--White);    
+    font-weight: 700;
+    text-align: center;
+}
+.info a::before{
+    content: url(images/icon-cart.svg);
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+    
+}
+
+.image img{
+  width:100%;
+  border-radius: 10px 0 0 10px;
+}
+
+
+  /*----------------------------------------------
+  ------------------------------------------------
+  3. Responsive Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+
+@media screen and (max-width: 600px){
+
+    main{
+        height: 610px;
+        width: 350px;
+        flex-direction: column;
+    }
+   .image img{
+        border-radius: 10px 10px 0 0;
+   }
+
+   .info .container{
+        padding: 20px;
+    }
+
+    .info h1{
+        margin-top: 15px;
+        
+    }
+    .info p{
+        margin-top: 15px;
+        
+    }
+
+
+}
+
